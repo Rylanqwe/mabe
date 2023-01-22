@@ -1,4 +1,4 @@
-let balance = 0;
+let balance = 10;
 const flipButton = document.getElementById("flip-button");
 const result = document.getElementById("result");
 const betAmount = document.getElementById("bet-amount");
