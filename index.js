@@ -7,7 +7,7 @@ const balanceDisplay = document.getElementById("balance");
 const message = document.getElementById("message");
 
 betAmount.addEventListener("input", function() {
-    if (betAmount.value > 0 && betSelection.value !== "" && balance >= betAmount.value) {
+    if (betAmount.value > 0 && betSelection.value !== "" && balance >= parseInt(betAmount.value)) {
         flipButton.disabled = false;
     } else {
         flipButton.disabled = true;
@@ -15,7 +15,7 @@ betAmount.addEventListener("input", function() {
 });
 
 betSelection.addEventListener("change", function() {
-    if (betAmount.value > 0 && betSelection.value !== "" && balance >= betAmount.value) {
+    if (betAmount.value > 0 && betSelection.value !== "" && balance >= parseInt(betAmount.value)) {
         flipButton.disabled = false;
     } else {
         flipButton.disabled = true;
@@ -33,4 +33,10 @@ flipButton.addEventListener("click", function() {
         message.innerHTML = "You won!";
     } else {
         balance -= parseInt(betAmount.value);
-       
+        message.innerHTML = "You lost.";
+    }
+    balanceDisplay.innerHTML = balance;
+    betAmount.value = "";
+    betSelection.value = "";
+    flipButton.disabled = true;
+});
