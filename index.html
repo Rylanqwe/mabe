@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coin Flip</title>
+</head>
+<body>
+  <button id="flip-button" disabled>Flip Coin</button>
+  <p id="result"></p>
+  <p>Balance: <span id="balance"></span></p>
+  <p id="message"></p>
+  <form>
+    <label for="bet-amount">Bet Amount:</label>
+    <input type="number" id="bet-amount" min="0">
+    <br>
+    <label for="bet-selection">Bet Selection:</label>
+    <select id="bet-selection">
+      <option value=""></option>
+      <option value="heads">Heads</option>
+      <option value="tails">Tails</option>
+    </select>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
